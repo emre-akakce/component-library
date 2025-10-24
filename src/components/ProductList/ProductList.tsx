@@ -1,5 +1,4 @@
 import React from 'react';
-import './product-list.css';
 
 export interface Product {
   id: string;

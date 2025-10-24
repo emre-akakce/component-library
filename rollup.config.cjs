@@ -3,7 +3,6 @@ const commonjs = require("@rollup/plugin-commonjs");
 const typescript = require("@rollup/plugin-typescript");
 const dts = require("rollup-plugin-dts").default;
 const peerDepsExternal = require('rollup-plugin-peer-deps-external');
-const postcss = require('rollup-plugin-postcss');
 
 // FIX: Export an async function to accommodate the ES Module environment
 // that is causing 'require is not defined'.
@@ -43,7 +42,6 @@ module.exports = async () => {
                 exclude: ["**/*.stories.tsx"], // Excludes Storybook files from the final build
                 declaration: false // Prevent TypeScript from emitting declaration files
             }),
-            postcss(),
         ],
         // Explicitly list all external dependencies that should NOT be bundled
         external: ["react", "react-dom"],
@@ -54,7 +52,7 @@ module.exports = async () => {
         // Input is typically the primary entry point
         input: "src/index.ts",
         output: [{ file: packageJson.types, format: "esm" }], // dist/types/index.d.ts
-        plugins: [dts(), postcss()], // The plugin that generates the type declarations
+        plugins: [dts()], // The plugin that generates the type declarations
     };
 
 
