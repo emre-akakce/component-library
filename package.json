@@ -11,7 +11,8 @@
     "build": "rollup -c",
     "start": "start-storybook -p 6006",
     "build-storybook": "storybook build",
-    "storybook": "storybook dev -p 6006"
+    "storybook": "storybook dev -p 6006",
+    "postbuild": "find dist/temp-css -name '*.css' -print0 | xargs -0 cat > dist/styles.css && rm -rf dist/temp-css"
   },
   "keywords": [],
   "author": "",
@@ -37,6 +38,7 @@
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
     "rollup": "^4.52.5",
+    "rollup-plugin-copy": "^3.5.0",
     "rollup-plugin-dts": "^6.2.3",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "storybook": "^9.1.13",
