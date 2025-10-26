@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import ProductList from './ProductList';
 
-import { ProductList } from './ProductList';
 
 const meta = {
   title: 'Example/ProductList',
@@ -8,12 +8,11 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
-  tags: ['autodocs'],
   argTypes: {},
 } satisfies Meta<typeof ProductList>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof ProductList>;
 
 export const Default: Story = {
   args: {

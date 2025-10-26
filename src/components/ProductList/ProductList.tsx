@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './ProductList.css';
 export interface Product {
   id: string;
   name: string;
@@ -10,7 +10,7 @@ export interface ProductListProps {
   products: Product[];
 }
 
-export const ProductList = ({ products }: ProductListProps) => {
+const ProductList = ({ products }: ProductListProps) => {
   return (
     <div className="product-list">
       {products.map((product) => (
@@ -22,3 +22,5 @@ export const ProductList = ({ products }: ProductListProps) => {
     </div>
   );
 };
+
+export default ProductList;
