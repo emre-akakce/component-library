@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './ProductList.css';
 export interface Product {
   id: string;
@@ -11,6 +11,9 @@ export interface ProductListProps {
 }
 
 const ProductList = ({ products }: ProductListProps) => {
+  useEffect(() => {
+    console.log('ProductList mounted or updated');
+  }, [products]);
   return (
     <div className="product-list">
       {products.map((product) => (
