@@ -1,10 +1,8 @@
-import React from 'react'
-import './badge.css'
+import React from 'react';
+import './badge.css';
 
-function Badge() {
-  return (
-    <span>En Ucuz</span>
-  )
-}
+const Badge = ({ text }) => {
+  return <span className="badge">{text}</span>;
+};
 
-export default Badge
+export default Badge;

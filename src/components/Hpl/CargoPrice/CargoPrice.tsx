@@ -1,10 +1,10 @@
 import React from 'react';
 import './cargoprice.css';
 
-const CargoPrice = () => {
+const CargoPrice = ({ cargo }) => {
   return (
     <div className="cargo-price">
-      <span>Kargo Bedava</span>
+      <span>{cargo}</span>
     </div>
   );
 };

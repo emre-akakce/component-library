@@ -1,10 +1,8 @@
-import React from 'react'
-import './price.css'
+import React from 'react';
+import './price.css';
 
-function Price() {
-  return (
-    <span className='price'>12312.50 TL</span>
-  )
-}
+const Price = ({ price }) => {
+  return <span className="price">{price}</span>;
+};
 
-export default Price
+export default Price;

@@ -1,10 +1,10 @@
 import React from 'react';
 import './dropratio.css';
 
-const DropRatio = () => {
+const DropRatio = ({ ratio }) => {
   return (
     <div className="drop-ratio">
-      <span>%50</span>
+      <span>{ratio}</span>
     </div>
   );
 };

@@ -7,10 +7,10 @@ describe('Hpl', () => {
   it('renders all subcomponents', () => {
     render(<Hpl />);
     
-    expect(screen.getByText('Product Title')).toBeInTheDocument();
-    expect(screen.getByText('%50')).toBeInTheDocument();
-    expect(screen.getByText('Kargo Bedava')).toBeInTheDocument();
-    expect(screen.getByText('En Ucuz')).toBeInTheDocument();
-    expect(screen.getByText('12312.50 TL')).toBeInTheDocument();
+    expect(screen.getByText('Product 1')).toBeInTheDocument();
+    expect(screen.getByText('%10')).toBeInTheDocument();
+    expect(screen.getAllByText('Kargo Bedava').length).toBe(2);
+    expect(screen.getByText('Yeni Ürün')).toBeInTheDocument();
+    expect(screen.getByText('100.00 TL')).toBeInTheDocument();
   });
 });
