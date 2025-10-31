@@ -1,0 +1,13 @@
+.alarm-count {
+  display: flex;
+  align-items: center;
+}
+
+.alarm-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: #f00;
+  border-radius: 50%;
+  margin-right: 8px;
+}

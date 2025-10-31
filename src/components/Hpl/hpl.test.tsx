@@ -12,5 +12,6 @@ describe('Hpl', () => {
     expect(screen.getAllByText('Kargo Bedava').length).toBe(2);
     expect(screen.getByText('Yeni Ürün')).toBeInTheDocument();
     expect(screen.getByText('100.00 TL')).toBeInTheDocument();
+    expect(screen.getByText('5')).toBeInTheDocument();
   });
 });
