@@ -1,7 +1,7 @@
 import React from 'react';
 import './header.css';
 
-const Header = ({ title }) => {
+const Header = ({ title }: { title: string }) => {
   return (
     <div className="header">
       <h1>{title}</h1>

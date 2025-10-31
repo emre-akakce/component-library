@@ -1,7 +1,7 @@
 import React from 'react';
 import './badge.css';
 
-const Badge = ({ text }) => {
+const Badge = ({ text }: { text: string }) => {
   return <span className="badge">{text}</span>;
 };
 
