@@ -50,8 +50,26 @@
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts"
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    },
+    "./button": {
+      "import": "./dist/esm/components/Button/Button.js",
+      "require": "./dist/cjs/components/Button/Button.js"
+    },
+    "./product-list": {
+      "import": "./dist/esm/components/ProductList/ProductList.js",
+      "require": "./dist/cjs/components/ProductList/ProductList.js"
+    },
+    "./hpl": {
+      "import": "./dist/esm/components/Hpl/Hpl.js",
+      "require": "./dist/cjs/components/Hpl/Hpl.js"
+    }
+  }
 }
